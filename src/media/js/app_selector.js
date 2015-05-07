@@ -49,8 +49,10 @@ define('app_selector',
     function get_disabled_regions(app) {
         // Given app, do set difference between all regions and app's regions
         // to get the disabled regions.
-        return Object.keys(regions.REGION_CHOICES_SLUG).filter(function(slug) {
-            return app.regions
+        var ALL_REGION_SLUGS = (regions.REGION_SLUGS ||
+                                Object.keys(regions.REGION_CHOICES_SLUG));
+        return ALL_REGION_SLUGS.filter(function(slug) {
+                    return app.regions
                       .map(function(region) { return region.slug; })
                       .indexOf(slug) < 0;
         });

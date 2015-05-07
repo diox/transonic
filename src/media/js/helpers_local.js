@@ -9,7 +9,6 @@ define('helpers_local',
     globals.COLLECTION_COLORS = utils_local.items(
         collection_colors.COLLECTION_COLORS);
     globals.feed = feed;
-    globals.REGIONS = regions.REGION_CHOICES_SLUG;
     globals.REGION_CHOICES = regionTransform(regions.REGION_CHOICES_SLUG);
     globals.CARRIERS = carriers.CARRIER_SLUGS;
 

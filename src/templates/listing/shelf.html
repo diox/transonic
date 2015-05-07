@@ -8,7 +8,7 @@
                                                  num_apps: shelf.app_count or shelf.apps.length}) }}</h3>
     <span class="type">
       {{ _('{carrier} - {region}')|format(
-           {carrier: shelf.carrier|unslug, region: REGIONS[shelf.region]}) }}</span>
+           {carrier: shelf.carrier|unslug, region: shelf.region}) }}</span>
     <span class="delete-feed-element"></span>
   </a>
   {% include "app_selector/app_selector_actions.html" %}
